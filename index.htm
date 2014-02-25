@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>כבר ילדה?</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="60; url=http://kvaryalda.com/">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='jquery-1.6.2.min.js'></script>
+<script>
+
+$(function() {
+	var query = 'https://api.mongolab.com/api/1/databases/kvaryalda/collections/kvaryalda?q={name:"nurit"}&apiKey=Mc0PwBcGSsXWgQCPaVSzKVH5X0G6BmCE';
+
+	var jqxhr = $.ajax(query)
+	.done(function(data) {
+		if (data && data[0] && data[0].value != undefined && data[0].text != undefined) {
+			$('h2#answer').html(data[0].text);
+			if (!data[0].value) {
+				$('h3#andnow').fadeIn(1000);
+			}
+		}
+	})
+	.always(function() {
+		$('h2#answer').fadeIn(1000);
+	});
+});
+
+</script>
+</head>
+
+<body>
+	<div>
+	<h1>כבר ילדה?</h1>
+	<h2 id='answer' style='display:none;'>אולי...</h2>
+	<h3 id='andnow' style='display:none;'><a href='//kvaryalda.com'>ועכשיו?</a></h3>
+	</div>
+</body>
+
+</html>
+

@@ -1,0 +1,40 @@
+body {
+	font-family:arial;
+	direction: rtl;
+	color: #000033;
+        background-color: #ccccff;
+}
+div {
+	text-align: center;
+	width:100%;
+}
+
+
+h3 {
+	font-size:15px;
+	bottom:10px;
+	position:absolute;
+	left:0;
+	right:0;
+}
+
+h2 {
+	font-size:200px;
+	top:50%;
+	position:absolute;
+	margin-top:-100px;
+	left:0;
+	right:0;
+}
+
+h1 {
+	font-size:50px;
+	margin-top:100px;
+}
+
+a { color: #000033; }
+a:link,
+a:hover,
+a:active,
+a:visited { color: #000033; text-decoration: none; }
+a:hover { text-decoration: underline; }
