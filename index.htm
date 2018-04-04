@@ -12,9 +12,9 @@ $(function() {
 
 	var jqxhr = $.ajax(query)
 	.done(function(data) {
-		if (data && data[0] && data[0].value != undefined && data[0].text != undefined) {
+		if (data && data[0] && data[0].status != undefined && data[0].text != undefined) {
 			$('h2#answer').html(data[0].text);
-			if (!data[0].value) {
+			if (!data[0].status) {
 				$('h3#andnow').fadeIn(1000);
 			}
 		}
