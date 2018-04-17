@@ -12,8 +12,9 @@ div {
 
 h3 {
 	font-size:15px;
-	bottom:10px;
+	top:50%;
 	position:absolute;
+	margin-top:-100px;
 	left:0;
 	right:0;
 }
